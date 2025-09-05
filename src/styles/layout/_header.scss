@@ -58,6 +58,10 @@
 
 .logo {
     justify-self: center;
+
+    &__image {
+        height: 18px;
+    }
 }
 
 .userbar {
