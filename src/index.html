@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home work 35</title>
+    <title>NEWSHA</title>
 </head>
-<body>
-    
-    <header class="header">
-        <h1>Example</h1>
-    </header>
 
-    <main>
-        <div id="image-container"></div>
-    </main>
+<body>
+    <section class="container container-header">
+        <header class="content content-header">
+            <!-- MENU -->
+            <div class="menu-bar">
+
+                <!-- BURGER -->
+                <div class="burger">
+                    <button class="burger__cta" data-burger="toggle" aria-label="Открыть меню">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="6" width="18" height="2" rx="1" fill="#292D32" />
+                            <rect x="3" y="12" width="18" height="2" rx="1" fill="#292D32" />
+                            <rect x="3" y="18" width="18" height="2" rx="1" fill="#292D32" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Main Menu -->
+                <div class="menu" data-menu="main">
+                    <nav>
+                        <ul class="menu__list">
+                            <li><a href="#" class="menu__link" data-menu-link="catalog">Каталог</a></li>
+                            <li><a href="#" class="menu__link" data-menu-link="hair-type">Тип волосся</a></li>
+                            <li><a href="#" class="menu__link" data-menu-link="about">Про NEWSHA</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="/" class="logo__link" data-logo="main">
+                    <!-- svg логотип -->
+                </a>
+            </div>
+
+            <!-- USERBAR -->
+            <div class="userbar">
+                <!-- SEARCH -->
+                <div class="src-search">
+                    <button class="src-search__cta" data-action="search">
+                        <!-- svg поиска -->
+                    </button>
+                </div>
+
+                <!-- USER -->
+                <div class="src-user">
+                    <a href="#" class="src-user__link" data-action="user">
+                        <!-- svg юзер -->
+                    </a>
+                </div>
+
+                <!-- CART -->
+                <div class="src-cart">
+                    <button class="src-cart__cta" data-action="cart">
+                        <!-- svg корзина -->
+                    </button>
+                </div>
+            </div>
+        </header>
+    </section>
+
 </body>
+
 </html>
