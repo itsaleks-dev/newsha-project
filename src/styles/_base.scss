@@ -10,8 +10,9 @@
 
 body {
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+    @extend %fontMain;
 }
+
 
 .content {
     width: 1600px;
