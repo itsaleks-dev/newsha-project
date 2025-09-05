@@ -24,7 +24,7 @@ export default {
       ? "assets/js/[name].[contenthash:8].js"
       : "assets/js/[name].js",
     assetModuleFilename: "assets/[name].[hash:8][ext][query]",
-    publicPath: "", // для GitHub Pages
+    publicPath: "/", // для GitHub Pages
     clean: true,
   },
   module: {
@@ -54,13 +54,20 @@ export default {
       {
         test: /\.s?css$/i,
         use: [
+          MiniCssExtractPlugin.loader, // без publicPath
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: "../" }, // css -> на уровень вверх к assets/*
+            loader: "css-loader",
+            options: { sourceMap: true },
           },
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
+          {
+            loader: "postcss-loader",
+            options: { sourceMap: true },
+          },
+          "resolve-url-loader", // должен быть перед sass-loader
+          {
+            loader: "sass-loader",
+            options: { sourceMap: true }, // обязателен для resolve-url-loader
+          },
         ],
       },
       // LESS (если нужно)
@@ -83,6 +90,7 @@ export default {
         test: /\.(png|jpe?g|gif|svg|webp)$/i,
         type: "asset/resource",
         generator: { filename: "assets/images/[name].[hash:8][ext]" },
+        exclude: path.resolve(process.cwd(), "src/assets/images"),
       },
     ],
   },

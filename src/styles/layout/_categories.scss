@@ -1,0 +1,61 @@
+@use 'sass:map';
+
+@use '../common/fonts';
+@use '../common/colors' as vars;
+@use '../common/mixins' as mixin;
+@use '../common/breakpoints' as bp;
+
+.content-categories {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.category-t {
+
+    &__title {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        width: 375px;
+        height: 168px;
+        background: url("../../assets/images/other/frizzz.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, xs)) {
+            width: 180px;
+            height: 100px;
+            padding-left: 5px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+    }
+}
+
+.category-o {
+
+    &__title {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        width: 375px;
+        height: 168px;
+        background: url("../../assets/images/other/oilll.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, xs)) {
+            width: 180px;
+            height: 100px;
+            padding-left: 5px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+    }
+}
